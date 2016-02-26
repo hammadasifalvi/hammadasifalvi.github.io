@@ -11,7 +11,13 @@
  * @ignore 27.07.2015 17:17
  * @returns {object}
  */
+var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
+ ref.push({
+      indexes: "Hammad  ",
+      action: "Awesome"
 
+
+    });
 (function(window){
     'use strict';
     
