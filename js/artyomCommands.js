@@ -28,7 +28,7 @@
             }
         },
          {
-            indexes: ["what's up",'what are you upto'],
+            indexes: ['whats up','what are you upto'],
             action : function(i){
                 artyom.say("I am listening to your commands");
             }
@@ -36,7 +36,7 @@
          {
             indexes: ['Follow','Follow me'],
             action : function(i){
-                artyom.say("I am Following you now!");
+                artyom.say("following");
             }
         },
              {
