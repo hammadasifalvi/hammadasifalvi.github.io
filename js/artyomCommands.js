@@ -19,6 +19,12 @@
      * Example Artyom Commands
      * @type Array
      */
+    
+
+
+
+
+     
     var artyomCommands = [
         //Simple Command Example
         {
@@ -83,6 +89,18 @@
     ];
     
     
+function newCommands(xindexes,xaction){ 
+   artyomCommands.push([
+indexes:['xindexes'],
+action:function(i){
+    artyom.say(xaction);
+}
+
+
+    ])
+     }];}
+
+     newCommands("what date is it","its an awesome day");
     /**
      * Artyom Commands Functions
      * 
