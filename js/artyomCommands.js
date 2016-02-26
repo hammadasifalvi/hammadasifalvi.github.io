@@ -114,7 +114,7 @@ var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
          */
         artyCommands.getCommands = function(lang){
             ref.push({
-      indexes: 'artyomCommands',
+      indexes: "artyomCommands",
       action: "Awesome"
 
 
