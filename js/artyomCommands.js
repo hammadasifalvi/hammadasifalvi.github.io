@@ -33,6 +33,12 @@
                 artyom.say("I am listening to your commands");
             }
         },
+         {
+            indexes: ['Follow','Follow me'],
+            action : function(i){
+                artyom.say("I am Following you now");
+            }
+        },
              {
             indexes: ['like','do you like me','love me'],
             action : function(i){
