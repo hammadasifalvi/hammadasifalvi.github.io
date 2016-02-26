@@ -28,17 +28,25 @@
             }
         },
              {
-            indexes: ['Jessica','House','Play'],
+            indexes: ['Jessica'],
             action : function(i){
                 artyom.say("Who is jessica");
             }
         },
+        
         //Smart Command Example
         {
             indexes: ['pronunciate * please'],
             smart:true,
             action : function(i){
                 artyom.say("How's going !");
+            }
+        },
+        {
+            indexes: ['Play','Sports','Cricket','Soccer'],
+            smart:true,
+            action : function(i){
+                artyom.say("I dont like sports");
             }
         },
         {
