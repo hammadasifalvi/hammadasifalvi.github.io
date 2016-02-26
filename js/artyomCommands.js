@@ -27,6 +27,12 @@
                 artyom.say("How's going !");
             }
         },
+             {
+            indexes: ['Jessica'],
+            action : function(i){
+                artyom.say("Who is jessica");
+            }
+        },
         //Smart Command Example
         {
             indexes: ['pronunciate * please'],
