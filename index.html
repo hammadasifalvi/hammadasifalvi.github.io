@@ -52,7 +52,8 @@
                     <li class="list-group-item" ng-repeat="result in ctrl.results">
                         <span  class="badge">{{ result.date | date : 'EEE MMM, yyyy hh:mm:ss a' }}</span>
                         {{ result.content }} 
-                        <script >responsiveVoice.speak("Hello My Friends");</script>
+                        <script >
+                        responsiveVoice.speak('{{result.content}}');</script>
                     </li>
                 </ul>
             </div>
