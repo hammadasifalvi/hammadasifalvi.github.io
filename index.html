@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Annyang Test</title>
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    
+    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
     <script>if (window.location.protocol === "http:") window.location.protocol = "https:";</script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/1.5.0/annyang.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -50,7 +51,8 @@
                 <ul class="list-group">
                     <li class="list-group-item" ng-repeat="result in ctrl.results">
                         <span class="badge">{{ result.date | date : 'EEE MMM, yyyy hh:mm:ss a' }}</span>
-                        {{ result.content }} {{result.awesome}}
+                        {{ result.content }} 
+                        <script >responsiveVoice.speak({{result.data}});</script>
                     </li>
                 </ul>
             </div>
