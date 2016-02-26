@@ -53,6 +53,23 @@
                         <span  class="badge">{{ result.date | date : 'EEE MMM, yyyy hh:mm:ss a' }}</span>
                         {{ result.content }} 
                         <script >responsiveVoice.speak("I dont like you");</script>
+                        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.2.1/annyang.min.js"></script>
+<script>
+if (annyang) {
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+    'show tps report': function() {
+      $('#tpsreport').animate({bottom: '-100px'});
+    }
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}
+</script>
                     </li>
                 </ul>
             </div>
