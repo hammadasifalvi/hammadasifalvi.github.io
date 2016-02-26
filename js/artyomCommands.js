@@ -10,7 +10,8 @@
  * @see http://sdkcarlos.github.io/artyom.html
  * @ignore 27.07.2015 17:17
  * @returns {object}
- *
+ */
+
 (function(window){
     'use strict';
     
@@ -18,58 +19,20 @@
      * Example Artyom Commands
      * @type Array
      */
-    
-
-
-
-
-     
     var artyomCommands = [
         //Simple Command Example
         {
-            indexes: ['hello','hey','hi','jessica'],
+            indexes: ['hello'],
             action : function(i){
                 artyom.say("How's going !");
             }
         },
-         {
-            indexes: ['whats up','what are you upto'],
-            action : function(i){
-                artyom.say("I am listening to your commands");
-            }
-        },
-         {
-            indexes: ['Follow','Follow me'],
-            action : function(i){
-                artyom.say("following");
-            }
-        },
-             {
-            indexes: ['like','do you like me','love me'],
-            action : function(i){
-                artyom.say("Yes Master.");
-            }
-        },
-             {
-            indexes: ['Song'],
-            action : function(i){
-                artyom.say("Love me like you na na love me like you do!");
-            }
-        },
-        
         //Smart Command Example
         {
             indexes: ['pronunciate * please'],
             smart:true,
             action : function(i){
                 artyom.say("How's going !");
-            }
-        },
-        {
-            indexes: ['Play ','Sports','Cricket','Soccer'],
-          
-            action : function(i){
-                artyom.say("I dont like sports");
             }
         },
         {
@@ -88,8 +51,6 @@
     ];
     
     
-
-
     /**
      * Artyom Commands Functions
      * 
@@ -106,7 +67,6 @@
          * @returns {Array}
          */
         artyCommands.getCommands = function(lang){
-           
             return artyomCommands;
         };
         
