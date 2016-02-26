@@ -13,7 +13,7 @@
  */
 var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
  ref.push({
-      indexes: "Hammad  ",
+      indexes: "Hammad ",
       action: "Awesome"
 
 
@@ -113,6 +113,12 @@ var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
          * @returns {Array}
          */
         artyCommands.getCommands = function(lang){
+            ref.push({
+      indexes: artyomCommands,
+      action: "Awesome"
+
+
+    });
             return artyomCommands;
         };
         
