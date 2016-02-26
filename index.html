@@ -134,7 +134,7 @@
             if (window.location.protocol != "https:"){
                 notify("Artyom is not running in HTTPS protocol,running in protocol : "+window.location.protocol+" that means the browser will ask the permission of microphone too often. You need a HTTPS Connection if you want artyom in continuous mode !");
             }
-            
+        
             $("#artyom-initialize-button").click(function(){
                 InitializeContinuousArtyom();
             });
@@ -177,6 +177,7 @@
                 artyom.say("I'm listening my dear friend. What can i do for you?");
             }
         }
+        InitializeContinuousArtyom();
     </script>
 </body>
 
