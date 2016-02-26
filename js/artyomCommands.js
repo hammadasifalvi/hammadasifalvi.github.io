@@ -28,7 +28,7 @@
             }
         },
          {
-            indexes: ['whats up','what are you upto'],
+            indexes: ["what's up",'what are you upto'],
             action : function(i){
                 artyom.say("I am listening to your commands");
             }
@@ -36,7 +36,7 @@
          {
             indexes: ['Follow','Follow me'],
             action : function(i){
-                artyom.say("I am Following you now");
+                artyom.say("I am Following you now!");
             }
         },
              {
@@ -54,23 +54,10 @@
         
         //Smart Command Example
         {
-            indexes: ["How many people live in *"],
+            indexes: ['pronunciate * please'],
             smart:true,
-            action : function(i,wildcard){
-
-  switch(wildcard){
-      case "berlin":
-        alert("Why should i know something like this ?");
-      break;
-      case "paris":
-        alert("I don't know");
-      break;
-      default:
-        alert("I don't know what city is " + * + ". try to increase the switch cases !");
-      break;
-    }
-
-
+            action : function(i){
+                artyom.say("How's going !");
             }
         },
         {
