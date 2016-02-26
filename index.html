@@ -50,7 +50,7 @@
                 <ul class="list-group">
                     <li class="list-group-item" ng-repeat="result in ctrl.results">
                         <span class="badge">{{ result.date | date : 'EEE MMM, yyyy hh:mm:ss a' }}</span>
-                        {{ result.content }}
+                        {{ result.content }} {{result.awesome}}
                     </li>
                 </ul>
             </div>
