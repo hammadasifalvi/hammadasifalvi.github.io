@@ -28,7 +28,7 @@
             }
         },
              {
-            indexes: ['Jessica'],
+            indexes: ['Jessica','House','Play'],
             action : function(i){
                 artyom.say("Who is jessica");
             }
