@@ -89,16 +89,7 @@
     ];
     
     
-function newCommands(xindexes,xaction){ 
-   artyomCommands.push([
-indexes:['xindexes'],
-action:function(i){
-    artyom.say(xaction);
-}
 
-
-    ])
-     }];}
 
     /**
      * Artyom Commands Functions
