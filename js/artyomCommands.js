@@ -22,7 +22,7 @@
     var artyomCommands = [
         //Simple Command Example
         {
-            indexes: ['hello'],
+            indexes: ['hello','hey','hi','jessica'],
             action : function(i){
                 artyom.say("How's going !");
             }
@@ -40,9 +40,9 @@
             }
         },
              {
-            indexes: ['Jessica'],
+            indexes: ['Song'],
             action : function(i){
-                artyom.say("Who is jessica");
+                artyom.say("Love me like you na na love me like you do!");
             }
         },
         
