@@ -35,6 +35,27 @@
                 artyom.say("How's going !");
             }
         },
+         {
+            indexes: ['What is your name'],
+            smart:true,
+            action : function(i){
+                artyom.say("My name is Timmy");
+            }
+        },
+        {
+            indexes: ['Timmy'],
+            smart:true,
+            action : function(i){
+                artyom.say("Yes Boss!");
+            }
+        },
+           {
+            indexes: ['Follow me','Can you follow me','Can you come with me'],
+            smart:true,
+            action : function(i){
+                artyom.say("Yes Boss! Engine Starting Preparing for lift off.");
+            }
+        },
         {
             indexes: ['open google',"go to google"],
             action : function(i){
