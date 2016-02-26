@@ -24,6 +24,7 @@
 <body ng-controller="MyController as ctrl">
 
 <div class="container">
+ <script >responsiveVoice.speak("Hey My name is Hamna Shahid and i am your personal assistant. What would you like me to do");</script>
     <div class="row">
         <div class="col-xs-12">
             <h1 class="page-header">Angular Annyang</h1>
@@ -52,8 +53,8 @@
                     <li class="list-group-item" ng-repeat="result in ctrl.results">
                         <span  class="badge">{{ result.date | date : 'EEE MMM, yyyy hh:mm:ss a' }}</span>
                         {{ result.content }} 
-                        <script >responsiveVoice.speak("I dont like you");</script>
-                        
+                        <script >responsiveVoice.speak("I  like you");</script>
+
                     </li>
                 </ul>
             </div>
