@@ -43,8 +43,8 @@
             }
         },
         {
-            indexes: ['Play','Sports','Cricket','Soccer'],
-            smart:true,
+            indexes: ['Play ','Sports','Cricket','Soccer'],
+          
             action : function(i){
                 artyom.say("I dont like sports");
             }
