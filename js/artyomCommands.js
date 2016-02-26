@@ -100,7 +100,6 @@ action:function(i){
     ])
      }];}
 
-     newCommands("what date is it","its an awesome day");
     /**
      * Artyom Commands Functions
      * 
