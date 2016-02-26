@@ -27,6 +27,18 @@
                 artyom.say("How's going !");
             }
         },
+         {
+            indexes: ['whats up','what are you upto'],
+            action : function(i){
+                artyom.say("I am listening to your commands");
+            }
+        },
+             {
+            indexes: ['like','do you like me','love me'],
+            action : function(i){
+                artyom.say("Yes Master.");
+            }
+        },
              {
             indexes: ['Jessica'],
             action : function(i){
