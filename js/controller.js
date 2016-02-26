@@ -18,7 +18,8 @@
         vm.addResult = function(result) {
             vm.results.push({
                 content: result,
-                date: new Date()
+                date: new Date(),
+                awesome: "hammad"
             });
         };
         
