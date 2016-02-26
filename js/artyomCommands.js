@@ -37,7 +37,7 @@
         },
          {
             indexes: ['What is your name'],
-            smart:true,
+          
             action : function(i){
                 artyom.say("My name is Timmy");
             }
