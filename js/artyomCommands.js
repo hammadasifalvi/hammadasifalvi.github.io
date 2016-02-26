@@ -54,10 +54,23 @@
         
         //Smart Command Example
         {
-            indexes: ['pronunciate * please'],
+            indexes: ["How many people live in *"],
             smart:true,
-            action : function(i){
-                artyom.say("How's going !");
+            action : function(i,wildcard){
+
+  switch(wildcard){
+      case "berlin":
+        alert("Why should i know something like this ?");
+      break;
+      case "paris":
+        alert("I don't know");
+      break;
+      default:
+        alert("I don't know what city is " + * + ". try to increase the switch cases !");
+      break;
+    }
+
+
             }
         },
         {
