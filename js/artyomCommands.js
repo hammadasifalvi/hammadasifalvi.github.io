@@ -37,14 +37,14 @@
         },
          {
             indexes: ['What is your name'],
-          
+            smart:true,
             action : function(i){
                 artyom.say("My name is Timmy");
             }
         },
         {
             indexes: ['Timmy'],
-            smart:true,
+            
             action : function(i){
                 artyom.say("Yes Boss!");
             }
