@@ -13,19 +13,19 @@
  */
 var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
  ref.push({
-      indexes: "index1",
-      action: "action1",
+      index: "index",
+      action: "action"
       
     });
 
 ref.on("child_added", function(snapshot) {
   var comment = snapshot.val();
-  addComment(comment.indexes, comment.action);
+  addComment(comment.index, comment.action);
 });
 
 function addComment(comment) {
   var comments = document.getElementById("comments");
-comments.innerHTML = "<hr><h4>" + indexes + " says<span>"  + "</span></h4><p>" + comment + "</p>" + comments.innerHTML;
+comments.innerHTML = "<hr><h4>" + index + " says<span>"  + "</span></h4><p>" + comment + "</p>" + comments.innerHTML;
 }
 
 
