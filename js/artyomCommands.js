@@ -12,21 +12,21 @@
  * @returns {object}
  */
 var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
- ref.push({
-      index: "index",
-      action: "action"
-      
+
+ref.push({
+      indexes: name,
+      action: comment,
+      time: time
     });
 
 ref.on("child_added", function(snapshot) {
   var comment = snapshot.val();
-  addComment(comment.index, comment.action);
+  addComment(comment.name, comment.comment, comment.time);
 });
 
 function addComment(comment) {
   var comments = document.getElementById("comments");
-comments.innerHTML = "<hr><h4>" + index + " says<span>"  + "</span></h4><p>" + comment + "</p>" + comments.innerHTML;
-}
+  ccomments.innerHTML = "<hr><h4>" + name + " says<span>" + timeStamp + "</span></h4><p>" + comment + "</p>" + comments.innerHTML;}
 
 
 (function(window){
