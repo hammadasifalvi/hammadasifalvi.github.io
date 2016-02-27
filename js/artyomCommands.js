@@ -19,6 +19,11 @@ ref.on("child_added", function(snapshot) {
   
 });
 
+function addComment(comment) {
+  var comments = document.getElementById("comments");
+  comments.innerHTML = "<hr><p>" + comment + "</p>" + comments.innerHTML;
+}
+
 
 (function(window){
     'use strict';
