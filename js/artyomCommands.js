@@ -30,12 +30,14 @@
 ref.on("child_added", function(snapshot) {
   var comment = snapshot.val();
     addComment(comment.name, comment.comment);
+    firebaseCommands(comment.name, comment.comment);
 });
 
 function addComment(name,comment) {
   var comments = document.getElementById("comments");
  comments.innerHTML = "<hr><p>" + name +"<br><hr>"+ comment+" </p><p>"  + "</p>" + comments.innerHTML;
 }
+
 
     var artyomCommands = [
         //Simple Command Example
@@ -69,6 +71,15 @@ function addComment(name,comment) {
     ];
     
     
+function firebaseCommands(name,comment){
+   artyomCommands.push({
+    indexes:[name],
+    action:function(i){
+        artyom.say(comment);
+    }
+   })
+
+}
     /**
      * Artyom Commands Functions
      * 
