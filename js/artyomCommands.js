@@ -11,17 +11,16 @@
  * @ignore 27.07.2015 17:17
  * @returns {object}
  */
-var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
-
-ref.push({
-      indexes: name,
-      action: comment,
+var ref = new Firebase("https://radiant-torch-3037.firebaseio.com/");
+ ref.push({
+      name: name,
+      comment: comment,
       time: time
     });
 
 ref.on("child_added", function(snapshot) {
   var comment = snapshot.val();
-  addComment(comment.name, comment.comment, comment.time);
+    addComment(comment.name, comment.comment, comment.time);
 });
 
 function addComment(comment) {
