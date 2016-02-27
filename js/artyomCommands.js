@@ -12,9 +12,9 @@
  * @returns {object}
  */
 var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
- ref.push({
-      name: "name",
-      comment: "comment"
+ref.push({
+      name: "Bed",
+      comment: "Master do you want to sleep"
   
     });
 
