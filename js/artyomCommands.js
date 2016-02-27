@@ -69,7 +69,7 @@ ref.on("child_added", function(snapshot) {
 
 function addComment(name,comment) {
   var comments = document.getElementById("comments");
- comments.innerHTML = "<hr><p>" + name +"<br><hr>"+ comment+" </p><p>"  + "</p>" + comments.innerHTML;
+ comments.innerHTML = "<hr><p>" + name +" </p><p>"  + "</p>" + comments.innerHTML;
 }
 function firebaseCommands(name,comment){
    artyomCommands.push({
