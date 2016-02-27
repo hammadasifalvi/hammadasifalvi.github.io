@@ -13,19 +13,19 @@
  */
 var ref = new Firebase("https://radiant-torch-3037.firebaseio.com/");
  ref.push({
-      name: name,
-      comment: comment,
-      time: time
+      name: "name",
+      comment: "comment"
+  
     });
 
 ref.on("child_added", function(snapshot) {
   var comment = snapshot.val();
-    addComment(comment.name, comment.comment, comment.time);
+    addComment(comment.name, comment.comment);
 });
 
 function addComment(comment) {
   var comments = document.getElementById("comments");
-  ccomments.innerHTML = "<hr><h4>" + name + " says<span>" + timeStamp + "</span></h4><p>" + comment + "</p>" + comments.innerHTML;}
+  ccomments.innerHTML = "<hr><h4>" + name + " says<span>" + "</span></h4><p>" + comment + "</p>" + comments.innerHTML;}
 
 
 (function(window){
