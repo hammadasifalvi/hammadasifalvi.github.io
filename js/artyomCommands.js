@@ -56,11 +56,7 @@
     
        var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
        
-ref.push({
-      name: "love",
-      comment: "Ali master, I am in love with you. Lets get married"
-  
-    });
+
 
 
 ref.on("child_added", function(snapshot) {
