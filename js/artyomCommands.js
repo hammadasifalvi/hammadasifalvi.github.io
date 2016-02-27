@@ -11,13 +11,22 @@
  * @ignore 27.07.2015 17:17
  * @returns {object}
  */
-var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
-ref.push({
+
+
+(function(window){
+    'use strict';
+    
+    /**
+     * Example Artyom Commands
+     * @type Array
+     */
+     var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
+/*ref.push({
       name: "Bed",
       comment: "Master do you want to sleep"
   
     });
-
+*/
 ref.on("child_added", function(snapshot) {
   var comment = snapshot.val();
     addComment(comment.name, comment.comment);
@@ -28,14 +37,6 @@ function addComment(name,comment) {
  comments.innerHTML = "<hr><p>" + name +"<br><hr>"+ comment+" </p><p>"  + "</p>" + comments.innerHTML;
 }
 
-
-(function(window){
-    'use strict';
-    
-    /**
-     * Example Artyom Commands
-     * @type Array
-     */
     var artyomCommands = [
         //Simple Command Example
         {
