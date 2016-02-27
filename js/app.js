@@ -7,12 +7,13 @@ myApp.controller('mainController',['$scope',function($scope){
    
 
 }]);
+
 myApp.controller('secondController',['$scope',function($scope){
 
     $scope.name='Sara';
    
 
-}]);
+}]);  
 
 (function(window){
     'use strict';
