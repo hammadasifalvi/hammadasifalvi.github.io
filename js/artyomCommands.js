@@ -14,6 +14,12 @@
 var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
 
 
+ref.on("child_added", function(snapshot) {
+  var comment = snapshot.val();
+  
+});
+
+
 (function(window){
     'use strict';
     
