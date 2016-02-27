@@ -23,7 +23,7 @@ ref.on("child_added", function(snapshot) {
     addComment(comment.name, comment.comment);
 });
 
-function addComment(comment) {
+function addComment(name,comment) {
   var comments = document.getElementById("comments");
  comments.innerHTML = "<hr><p>" + name +"<br><hr>"+ comment+" </p><p>"  + "</p>" + comments.innerHTML;
 }
