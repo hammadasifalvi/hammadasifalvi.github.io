@@ -58,7 +58,7 @@
        
 ref.push({
       name: "love",
-      comment: "I am a human being god damn it!!! we are the champions. Ali please get married. Mohsin you are awesome. and this music i am listening to is also awesome"
+      comment: "Ali master, I am in love with you. Lets get married"
   
     });
 
