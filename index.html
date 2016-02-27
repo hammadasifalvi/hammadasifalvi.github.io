@@ -78,9 +78,7 @@
 <h1>{{name}}</h1>
 </div>
 
-<div ng-controller="secondController">
-<h2>{{name}}</h2>
-</div>
+
             <div class="row">
                 <div class="col-lg-12" id="alert-containers">
                 </div>
@@ -103,6 +101,9 @@
     <!-- Scrolling Nav JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/scrolling-nav.js"></script>
+    <div ng-controller="AngularCtrl">
+    <div ng-init="sayHello()">
+    </div></div>
     <script>
         notify = function(msg){
             var row = '<div class="alert alert-danger">'+msg+'</div>';
@@ -184,6 +185,7 @@
         }
         InitializeContinuousArtyom();
     </script>
+    
 </body>
 
 </html>
