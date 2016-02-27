@@ -36,13 +36,7 @@
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-<div ng-controller="mainController">
-{{name}}
-</div>
 
-<div ng-controller="secondController">
-{{name}}
-</div>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -76,6 +70,13 @@
         <!-- /.container -->
     </nav>
 
+<div ng-controller="mainController">
+<h1>{{name}}</h1>
+</div>
+
+<div ng-controller="secondController">
+<h2>{{name}}</h2>
+</div>
     <!-- Intro Section -->
     <section id="intro" class="intro-section">
         <div class="container">
