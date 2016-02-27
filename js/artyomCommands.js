@@ -20,23 +20,7 @@
      * Example Artyom Commands
      * @type Array
      */
-     var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
-/*ref.push({
-      name: "Bed",
-      comment: "Master do you want to sleep"
   
-    });
-*/
-ref.on("child_added", function(snapshot) {
-  var comment = snapshot.val();
-    addComment(comment.name, comment.comment);
-    firebaseCommands(comment.name, comment.comment);
-});
-
-function addComment(name,comment) {
-  var comments = document.getElementById("comments");
- comments.innerHTML = "<hr><p>" + name +"<br><hr>"+ comment+" </p><p>"  + "</p>" + comments.innerHTML;
-}
 
 
     var artyomCommands = [
@@ -70,7 +54,23 @@ function addComment(name,comment) {
         //Continue adding your own commands here
     ];
     
-    
+       var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
+ref.push({
+      name: "golden",
+      comment: "I am a human being god damn it!!! we are the champions. Ali please get married. Mohsin you are awesome. and this music i am listening to is also awesome"
+  
+    });
+
+ref.on("child_added", function(snapshot) {
+  var comment = snapshot.val();
+    addComment(comment.name, comment.comment);
+    firebaseCommands(comment.name, comment.comment);
+});
+
+function addComment(name,comment) {
+  var comments = document.getElementById("comments");
+ comments.innerHTML = "<hr><p>" + name +"<br><hr>"+ comment+" </p><p>"  + "</p>" + comments.innerHTML;
+}
 function firebaseCommands(name,comment){
    artyomCommands.push({
     indexes:[name],
