@@ -55,11 +55,13 @@
     ];
     
        var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
+       
 ref.push({
-      name: "golden",
+      name: "love",
       comment: "I am a human being god damn it!!! we are the champions. Ali please get married. Mohsin you are awesome. and this music i am listening to is also awesome"
   
     });
+
 
 ref.on("child_added", function(snapshot) {
   var comment = snapshot.val();
