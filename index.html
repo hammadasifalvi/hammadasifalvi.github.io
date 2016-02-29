@@ -1,197 +1,403 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Timmy Voice Recognition Module</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-        <link href="css/icon.css" rel="stylesheet">
-         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-          <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-    </body>
-    <!-- Loading Artyom in Head for a optimized experience -->
-     <script src="js/angular.min.js"></script>
-         <script src='js/firebase.js'></script>
-    <script src="js/artyomCommands.js"></script>
-    <script src="js/artyom.min.js"></script>
-     <script src="js/app.js"></script>
-<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Timmy </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">
-                            Status of recognizing 
-                            <span class="glyphicon glyphicon-record" id="artyom-status-microphone" style="color:red;"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-
-    <!-- Intro Section -->
-    <section id="intro" class="intro-section">
-        <div class="container">
-        <div ng-controller="mainController"><br>
-
-  <div id="comments"></div>
-</div>
-
-
-            <div class="row">
-                <div class="col-lg-12" id="alert-containers">
+<!-- saved from url=(0039)https://sdkcarlos.github.io/jarvis.html -->
+<html lang="en" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JARVIS - Artyom.js continuous demo</title>
+        <link rel="icon" href="https://sdkcarlos.github.io/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./JARVIS - Artyom.js continuous demo_files/css">
+        <link rel="stylesheet" href="./JARVIS - Artyom.js continuous demo_files/icon">
+        <link rel="stylesheet" href="./JARVIS - Artyom.js continuous demo_files/deeppurple.css">
+        <link rel="stylesheet" href="./JARVIS - Artyom.js continuous demo_files/styles.min.css">
+        <script src="./JARVIS - Artyom.js continuous demo_files/ca-pub-7687344986141325.js"></script><script>
+            if(window.location.protocol != 'https:'){
+                window.location.href = (window.location.href).replace('http:','https:');
+            }
+        </script>
+        <script src="./JARVIS - Artyom.js continuous demo_files/artyom.min.js"></script>
+        <style>
+            #view-source {
+                position: fixed;
+                display: block;
+                right: 0;
+                bottom: 0;
+                margin-right: 40px;
+                margin-bottom: 40px;
+                z-index: 900;
+            }
+        </style>
+    </head>
+    <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+        <div class="mdl-layout__container has-scrolling-header"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-tabs is-upgraded" data-upgraded=",MaterialLayout">
+            <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+                <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                 </div>
-             
-                <div class="col-lg-12">
-                   
-                    <ul class="list-group" id="artyom-available-commands">
-                    </ul>
-
+                <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                    <h3>J.A.R.V.I.S <small>Artyom.js continuous demo</small></h3>
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                </div>
+                <div class="mdl-layout__tab-bar-container"><div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-left-button"><i class="material-icons">chevron_left</i></div><div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark mdl-js-ripple-effect--ignore-events" data-upgraded=",MaterialRipple">
+                    <a href="https://sdkcarlos.github.io/jarvis.html#overview" class="mdl-layout__tab is-active">Overview<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a>
+                    <a href="https://sdkcarlos.github.io/jarvis.html#features" class="mdl-layout__tab">Voice commands<span class="mdl-layout__tab-ripple-container mdl-js-ripple-effect" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></a>
+                </div><div class="mdl-layout__tab-bar-button mdl-layout__tab-bar-right-button"><i class="material-icons">chevron_right</i></div></div>
+            </header>
+            <main class="mdl-layout__content">
+                <div class="mdl-layout__tab-panel is-active" id="overview">
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="zone-music" style="display:none;">
+                        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+                            <iframe></iframe>
+                        </header>
+                        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+                            <div class="mdl-card__supporting-text">
+                                <h4>Music source - Spotify</h4>
+                                <span class="songdesc"></span><br>
+                                <img id="zone-music-image" style="height: 130px;width:130px;">
+                            </div>
+                            <div class="mdl-card__actions">
+                                <a href="https://sdkcarlos.github.io/jarvis.html#" class="mdl-button" onclick="artyom.simulateInstruction(&#39;jarvis stop music&#39;);">Close music</a>
+                            </div>
+                        </div>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1" data-upgraded=",MaterialButton,MaterialRipple">
+                            <i class="material-icons">more_vert</i>
+                        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+                        <div class="mdl-menu__container is-upgraded"><div class="mdl-menu__outline mdl-menu--bottom-right"></div><ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1" data-upgraded=",MaterialMenu">
+                            <li class="mdl-menu__item" tabindex="-1">Lorem</li>
+                            <li class="mdl-menu__item" disabled="" tabindex="-1">Ipsum</li>
+                            <li class="mdl-menu__item" tabindex="-1">Dolor</li>
+                        </ul></div>
+                    </section>
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <div style="width: 100%;min-height:100px;text-align:center;">
+                            <script async="" src="./JARVIS - Artyom.js continuous demo_files/adsbygoogle.js"></script>
+                            <!-- Responsive little -->
+                            <ins class="adsbygoogle" style="display: block; height: 90px;" data-ad-client="ca-pub-7687344986141325" data-ad-slot="3487567897" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:860px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:860px;background-color:transparent"><iframe width="860" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+                            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                    </section>
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <div class="mdl-card mdl-cell mdl-cell--12-col">
+                            <div class="mdl-card__supporting-text">
+                                <h4>Recognized text</h4>
+                                <b><span id="recognized-text"> give an arm yard Dallas</span></b><br>
+                                Here will appear the recognized text when you talk.
+                            </div>
+                        </div>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3" data-upgraded=",MaterialButton,MaterialRipple">
+                            <i class="material-icons">more_vert</i>
+                        <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 92.5097px; height: 92.5097px; transform: translate(-50%, -50%) translate(9px, 27px);"></span></span></button>
+                        <div class="mdl-menu__container is-upgraded" style="right: 8px; top: 40px; width: 124px; height: 160px;"><div class="mdl-menu__outline mdl-menu--bottom-right" style="width: 124px; height: 160px;"></div><ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3" data-upgraded=",MaterialMenu" style="clip: rect(0px 124px 0px 124px);">
+                            <li class="mdl-menu__item" tabindex="-1" style="">Lorem</li>
+                            <li class="mdl-menu__item" disabled="" tabindex="-1" style="">Ipsum</li>
+                            <li class="mdl-menu__item" tabindex="-1" style="">Dolor</li>
+                        </ul></div>
+                    </section>
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <div style="width: 100%;min-height:100px;text-align:center;">
+                            <script async="" src="./JARVIS - Artyom.js continuous demo_files/adsbygoogle.js"></script>
+                            <!-- Responsive little -->
+                            <ins class="adsbygoogle" style="display: block; height: 90px;" data-ad-client="ca-pub-7687344986141325" data-ad-slot="3487567897" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:860px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:860px;background-color:transparent"><iframe width="860" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+                            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                    </section>
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <div style="text-align:center;">
+                            <a href="http://ourcodeworld.com/about" target="_blank">
+                                <img src="./JARVIS - Artyom.js continuous demo_files/donation.png">
+                            </a>
+                            <p>Buy me a coffe, visit ourcodeworld.com and read some interesting stuff about programming.</p>
+                        </div>
+                    </section>
+                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                        <div class="mdl-card mdl-cell mdl-cell--12-col">
+                            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                                <h4 class="mdl-cell mdl-cell--12-col">Details</h4>
+                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                    <div class="section__circle-container__circle mdl-color--primary"></div>
+                                </div>
+                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                    <h5>JARVIS listen forever</h5>
+                                    Just say commands, this demo uses artyom in continuous mode (https connection)
+                                </div>
+                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                    <div class="section__circle-container__circle mdl-color--primary"></div>
+                                </div>
+                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                    <h5>Commands</h5>
+                                    Please refer all the available commands of jarvis in the tab <b>commands</b> in the top of the website.
+                                </div>
+                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                    <div class="section__circle-container__circle mdl-color--primary"></div>
+                                </div>
+                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                    <h5>This demo uses a execution keyword</h5>
+                                    The execution keyword for jarvis is : <b>now</b>, that means for example if you say : <b>jarvis play music</b>, the music will start
+                                    but if you say <b>jarvis stop music</b> while the music is playing will not work until the music stops because the music is talking too ! to prevent
+                                    this jarvis uses the execution keyword <b>now</b>.
+                                    If the music is playing and you want to stop it say : <b>Jarvis stop music now</b>. <a href="http://ourcodeworld.com/projects/projects-documentation/15/read-doc/artyom-initialize/artyom-js"> Refer to the documentation here.</a>
+                                </div>
+                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                    <div class="section__circle-container__circle mdl-color--primary"></div>
+                                </div>
+                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                    <h5>Debug mode active</h5>
+                                    See everything that happens in the javascript console
+                                </div>
+                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                    <div class="section__circle-container__circle mdl-color--primary"></div>
+                                </div>
+                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                    <h5>Test in a quiet place</h5>
+                                    Remember that this technology is not perfect, to play nicely with artyom.js and webkitspeechrecognition is recommendable to use
+                                    in quiet places. If a command doesn't work use the execution keyword "now" : 'please do something <b>now</b>'. This will be helpful in noisy environments.
+                                </div>
+                            </div>
+                            <div class="mdl-card__actions">
+                                <a href="https://sdkcarlos.github.io/jarvis.html#" class="mdl-button">Read our features</a>
+                            </div>
+                        </div>
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2" data-upgraded=",MaterialButton,MaterialRipple">
+                            <i class="material-icons">more_vert</i>
+                        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+                        <div class="mdl-menu__container is-upgraded"><div class="mdl-menu__outline mdl-menu--bottom-right"></div><ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2" data-upgraded=",MaterialMenu">
+                            <li class="mdl-menu__item" tabindex="-1">Lorem</li>
+                            <li class="mdl-menu__item" disabled="" tabindex="-1">Ipsum</li>
+                            <li class="mdl-menu__item" tabindex="-1">Dolor</li>
+                        </ul></div>
+                    </section>
+                    <section class="section--footer mdl-color--white mdl-grid">
+                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="text-align:center;">
+                            <img src="./JARVIS - Artyom.js continuous demo_files/ocw-logo-main.png" style="max-height:95px;">
+                        </div>
+                        <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                            <h5>Our Code World</h5>
+                            A world of code, closer than you think. <a href="http://ourcodeworld.com/"> Read more coding articles in www.ourcodeworld.com</a><br>
+                            This demo is under development, therefore there are just a couple of commands, you can make it better ! Download artyom.js and develop your own jarvis.
+                        </div>
+                    </section>
+                </div>
+                <div class="mdl-layout__tab-panel" id="features">
+                    <section class="section--center mdl-grid mdl-grid--no-spacing">
+                        <div id="commands-container"><div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone"><h5>Jarvis Play some music,play music,play some music</h5>Play random music in a iframe</div><div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone"><h5>Jarvis stop the music,stop music</h5>Say : 'Jarvis stop the music now' if the music is playing</div><div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone"><h5>translate * in Spanish,translate * in german</h5>Jarvis will translate all that you say into another language (allow popups for open google translate)</div><div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone"><h5>hello how are,how are you,hello</h5>Ask the mood of jarvis or simply say hello</div><div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone"><h5>tell me a joke,jarvis tell me a joke</h5>Jarvis knows some jokes</div><div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone"><h5>Shut up jarvis,Jarvis please shut up</h5>If jarvis talk too much, say shut up !</div></div>
+                    </section>
+                </div>
+                <footer class="mdl-mega-footer">
+                    <div class="mdl-mega-footer--middle-section">
+                        <div class="mdl-mega-footer--drop-down-section">
+                            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+                            <h1 class="mdl-mega-footer--heading">Documentation</h1>
+                            <ul class="mdl-mega-footer--link-list">
+                                <li><a href="http://ourcodeworld.com/projects/projects-documentation/1/list/artyom-js">Read official docs of artyom.js</a></li>
+                            </ul>
+                        </div>
+                        <div class="mdl-mega-footer--drop-down-section">
+                            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+                            <h1 class="mdl-mega-footer--heading">Awesome voice recognition articles</h1>
+                            <ul class="mdl-mega-footer--link-list">
+                                <li><a href="http://ourcodeworld.com/articles/read/59/how-to-convert-voice-to-text-with-javascript-webkitspeechrecognition-api-easily">Voice to text with artyom.js</a></li>
+                                <li><a href="http://ourcodeworld.com/articles/read/44/how-to-add-voice-commands-to-your-webpage-with-javascript">How to use artyom</a></li>
+                            </ul>
+                        </div>
+                        <div class="mdl-mega-footer--drop-down-section">
+                            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+                            <h1 class="mdl-mega-footer--heading">Download Artyom.js</h1>
+                            <ul class="mdl-mega-footer--link-list">
+                                <li><a href="https://github.com/sdkcarlos/artyom.js">Github</a></li>
+                            </ul>
+                        </div>
+                        <div class="mdl-mega-footer--drop-down-section">
+                            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked="">
+                            <h1 class="mdl-mega-footer--heading">FAQ</h1>
+                            <ul class="mdl-mega-footer--link-list">
+                                <li><a href="http://ourcodeworld.com/projects/projects-faq/1/list/artyom-js">Questions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mdl-mega-footer--bottom-section">
+                        <div class="mdl-logo">
+                            More Information
+                        </div>
+                        <ul class="mdl-mega-footer--link-list">
+                            <li><a href="http://sdkcarlos.github.io/sites/artyom.html">Artyom.js Voice commands plugin</a></li>
+                            <li><a href="http://ourcodeworld.com/privacy-policy">Privacy and Terms</a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </main>
+        </div></div>
+        <a href="https://github.com/google/material-design-lite/blob/master/templates/text-only/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" data-upgraded=",MaterialButton,MaterialRipple">this demo is running artyom.js v.0.9.1</a>
+        <script src="./JARVIS - Artyom.js continuous demo_files/material.min.js"></script>
+        <script src="./JARVIS - Artyom.js continuous demo_files/jquery.min.js"></script>
+        <script>
+            artyom.addCommands([
+                {
+                    description:"Play random music in a iframe",
+                    indexes:["Jarvis Play some music",'play music','play some music'],
+                    action: function(){
+                        var musicGroup = [
+                            {
+                                desc:'Muse - Time is Running Out',
+                                url:'https://p.scdn.co/mp3-preview/b326e03624cb098d8387e17aa46669edac0d025a',
+                                img:'https://i.scdn.co/image/d90926f8a2c6c407a7140b4a38688cff7a28ecba',
+                            },
+                            {
+                                desc:'Slipknot - Snuff',
+                                url:'https://p.scdn.co/mp3-preview/90ae4a9672a3030f19ddfda4498492bb1ff5dfb6',
+                                img:'https://i.scdn.co/image/a7049dcc2f66fe38a36fec7b51633f4512345927',
+                            },
+                            {
+                                desc:'A-ha - Forest fire',
+                                url:'https://p.scdn.co/mp3-preview/ebee4f7854959e720675b028813a2cb3b04c8775',
+                                img:'https://i.scdn.co/image/b902e7d71515a2aa60cef6300f95c756c702a83b',
+                            },
+                            {
+                                desc:"Us- Regina spektor (500 days of summer)",
+                                url:'https://p.scdn.co/mp3-preview/1a437724c510358058a71c4cac11b2fd1d42acf8',
+                                img:'https://i.scdn.co/image/4a8139e72ad0f199a1fdae5ac878977450b37784'
+                            },
+                            {
+                                desc:'Daryl hall & John Oates - You make my dreams (500 days of summer)',
+                                url:'https://p.scdn.co/mp3-preview/bc32bb9e556ef8f9d27564f3a995e02d9efdbc24',
+                                img:'https://i.scdn.co/image/4a8139e72ad0f199a1fdae5ac878977450b37784'
+                            }
+                        ];
+                        
+                        var item = musicGroup[Math.floor(Math.random()*musicGroup.length)];
+                        var div = $('#zone-music');
+                        div.show().find('iframe').attr('src',(item.url));
+                        div.find('.songdesc').html(item.desc);
+                        $('#zone-music-image').attr('src',item.img)
+                    }
+                },
+                {
+                    description:"Say : 'Jarvis stop the music now' if the music is playing",
+                    indexes:["Jarvis stop the music",'stop music'],
+                    action: function(){
+                        $('#zone-music').hide().find('iframe').attr('src','');
+                    }
+                },
+                {
+                    description:"Jarvis will translate all that you say into another language (allow popups for open google translate)",
+                    indexes: ["translate * in Spanish","translate * in german"],
+                    smart:true,
+                    action : function(i,wildcard,sentence){
+                        switch(i){
+                            case 0:
+                                window.open("https://translate.google.com/?source=gtx_m#en/es/"+wildcard);
+                            break;
+                            case 1:
+                                window.open("https://translate.google.com/?source=gtx_m#en/de/"+wildcard);
+                            break;
+                        }
+                    }
+                },
+                {
+                    description:"Ask the mood of jarvis or simply say hello",
+                    indexes: ['hello how are','how are you','hello'],
+                    action : function(i){
+                        var forHowareyou = [
+                            'Thankfully alive and still somewhat young and healthy, in this economy what more can I ask for?',
+                            'Cool as a cucumber',"I don't want to be rude but, is not of your interest",
+                            'I am doing so fabulous today! I can hardly control myself from dancing.',
+                            'From what I hear, I am very good.',
+                            "I can't complain, I've tried, but no one listens.",
+                            "As long as I can keep the kitten I found today, I'll be fine!"
+                        ];
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+                        var forHello = [
+                            "Ring a ding ding, you're talking to the king.",
+                            "Hi, is John there?","Chuck norris is indestructible",
+                            'How goes it?',"Are you a girl?",
+                            "I'm getting bored",
+                        ];
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Scrolling Nav JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
-
-    <script>
-        notify = function(msg){
-            var row = '<div class="alert alert-danger">'+msg+'</div>';
-            $("#alert-containers").append(row);
-        };
-        /**
-         * The onDOM Ready function is not obligatory. This is only for notice the user of errors while testing
-         * artyom.
-         * 
-         * @returns {undefined}
-         */
-        $(function(){
-            isLocalFile();
+                        // var i = the index in the array of the given options.
+                        switch(i){
+                            case 0:
+                            case 1:
+                                var frase = forHowareyou[Math.floor(Math.random() * forHowareyou.length)];
+                                artyom.say(frase);
+                            break;
+                            case 2:
+                                var frase = forHello[Math.floor(Math.random() * forHello.length)];
+                                artyom.say(frase);
+                            break;
+                        }
+                    }
+                },
+                {
+                    description:"Jarvis knows some jokes",
+                    indexes:['tell me a joke','jarvis tell me a joke'],
+                    action:function(){
+                        var jokes = [
+                            'What do you get when you cross a bear with a deer?. A Beer',
+                            'What do you get when you cross a dog with a telephone?.  A golden receiver.',
+                            'Why are dogs such bad dancers?. They have two left feet.'
+                        ];
+                        
+                        var joke = jokes[Math.floor(Math.random() * jokes.length)];
+                        artyom.say(joke);
+                    }
+                },
+                {
+                    description:"If jarvis talk too much, say shut up !",
+                    indexes:['Shut up jarvis','Jarvis please shut up'],
+                    action:function(){
+                        artyom.shutUp();
+                    }
+                },
+            ]);
             
-            artyom.when("error",function(error){
-                notify("An error of artyom has ocurred ! See the console for more information and choose if you want to show this to the user or not depending to the code : " + error.code);
-                console.log(error);
-            });
-            
-            artyom.when("Recognition",function(data){
-                //Green color again when a word is recognized
-                $("#artyom-status-microphone").css("color","green");
-            });
-            
-            artyom.when("FinishRecognition",function(data){
-                //Red color again when finish the recognition
-                $("#artyom-status-microphone").css("color","red");
-            });
-            
-            if(!artyom.device.isChrome){
-                notify("ATENTION: You are not running Google Chrome ! SpeechRecognitionAPI and SpeechSynthesisAPI is only available in google chrome ! ");
-            }
-            
-            if (window.location.protocol != "https:"){
-                notify("Artyom is not running in HTTPS protocol,running in protocol : "+window.location.protocol+" that means the browser will ask the permission of microphone too often. You need a HTTPS Connection if you want artyom in continuous mode !");
-            }
-            
-            $("#artyom-initialize-button").click(function(){
-                InitializeContinuousArtyom();
-            });
-            
-            var comandos = artyom.getAvailableCommands();
-            
-            for(var i = 0;i < comandos.length;i++){
-                var comando = comandos[i];
-                var item = '<li class="list-group-item">'+comando.indexes+'</li>';
-                $("#artyom-available-commands").append(item);
-            }
-        });
-        
-        $(window).load(function(){
-            artyom.say("Timmy system On"); 
-        });
-        
-        function isLocalFile(){
-            if((window.location.origin) == "file://"){
-                notify("ATENTION: It seems you're running the artyom demo from a local file ! The SpeechRecognitionAPI Needs to be hosted someway (server as http or https). \n Artyom will NOT work here, Sorry.");
-                return true;
-            }
-            return false;
-        }
-        
-        /**
-         * Initializes artyom
-         * 
-         * @returns {undefined}
-         */
-        function InitializeContinuousArtyom(){
-            if(!isLocalFile()){
-                artyom.initialize({
-                    debug:true, // Show messages in console
-                    lang:"en-GB",
-                    continuous:true, //A forever Running Mode
-                    listen:true //Start Listening
-                });
+            $(function(){
                 
-                artyom.say("I'm listening my dear friend. What can i do for you?");
+            });
+            
+            artyom.redirectRecognizedTextOutput(function(text,isFinal){
+                var sel = $('#recognized-text');
+                if(isFinal){
+                    sel.html('');
+                }else{
+                    sel.html(text);
+                }
+            });
+            
+            function startArtyom(){
+                /**
+                 *  Initialization of artyom
+                 */
+                artyom.initialize({
+                    lang:'en-GB',
+                    debug:true,
+                    continuous:true,
+                    listen:true,
+                    executionKeyword:'now'
+                });
             }
-        }
-        InitializeContinuousArtyom();
+            
+            $(window).load(function(){
+                $('#view-source').text("this demo is running artyom.js v."+artyom.getVersion());
+                startArtyom();
+                
+                var commands = artyom.getAvailableCommands();
+                var html = '';
+                
+                for(var i = 0;i < commands.length;i++){
+                    var comm = commands[i];
+                    html += '<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">';
+                    html += '<h5>'+comm.indexes.toString()+'</h5>';
+                    html +=  comm.description;
+                    html += '</div>'
+                }
+                
+                $('#commands-container').html(html);
+            });
+        </script>
+    
 
-    </script>
-      
-
-</body>
-
-</html>
+</body></html>
