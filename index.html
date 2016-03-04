@@ -47,9 +47,15 @@
             <main class="mdl-layout__content">
                 <div class="mdl-layout__tab-panel is-active" id="overview">
                     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="zone-music" style="display:none;">
-                      
+                        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+                            <iframe></iframe>
+                        </header>
                         <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-                       
+                            <div class="mdl-card__supporting-text">
+                                <h4>Music source - Spotify</h4>
+                                <span class='songdesc'></span><br>
+                                <img id='zone-music-image' style='height: 130px;width:130px;'>
+                            </div>
                             <div class="mdl-card__actions">
                                 <a href="#" class="mdl-button" onclick="artyom.simulateInstruction('jarvis stop music');">Close music</a>
                             </div>
@@ -77,119 +83,12 @@
                             </script>
                         </div>
                     </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <div class="mdl-card mdl-cell mdl-cell--12-col">
-                            <div class="mdl-card__supporting-text">
-                                <h4>Recognized text</h4>
-                                <b><span id='recognized-text'></span></b><br>
-                                Here will appear the recognized text when you talk.
-                            </div>
-                        </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
-                            <i class="material-icons">more_vert</i>
-                        </button>
-                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
-                            <li class="mdl-menu__item">Lorem</li>
-                            <li class="mdl-menu__item" disabled>Ipsum</li>
-                            <li class="mdl-menu__item">Dolor</li>
-                        </ul>
-                    </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <div style="width: 100%;min-height:100px;text-align:center;">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- Responsive little -->
-                            <ins class="adsbygoogle"
-                                 style="display:block"
-                                 data-ad-client="ca-pub-7687344986141325"
-                                 data-ad-slot="3487567897"
-                                 data-ad-format="auto"></ins>
-                            <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
-                        </div>
-                    </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <div style="text-align:center;">
-                            <a href="http://ourcodeworld.com/about" target="_blank">
-                                <img src="sites/artyom-resources/images/donation.png" />
-                            </a>
-                            <p>Buy me a coffe, visit ourcodeworld.com and read some interesting stuff about programming.</p>
-                        </div>
-                    </section>
-                    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                        <div class="mdl-card mdl-cell mdl-cell--12-col">
-                            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                                <h4 class="mdl-cell mdl-cell--12-col">Details</h4>
-                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                                    <div class="section__circle-container__circle mdl-color--primary"></div>
-                                </div>
-                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                    <h5>JARVIS listen forever</h5>
-                                    Just say commands, this demo uses artyom in continuous mode (https connection)
-                                </div>
-                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                                    <div class="section__circle-container__circle mdl-color--primary"></div>
-                                </div>
-                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                    <h5>Commands</h5>
-                                    Please refer all the available commands of jarvis in the tab <b>commands</b> in the top of the website.
-                                </div>
-                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                                    <div class="section__circle-container__circle mdl-color--primary"></div>
-                                </div>
-                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                    <h5>This demo uses a execution keyword</h5>
-                                    The execution keyword for jarvis is : <b>now</b>, that means for example if you say : <b>jarvis play music</b>, the music will start
-                                    but if you say <b>jarvis stop music</b> while the music is playing will not work until the music stops because the music is talking too ! to prevent
-                                    this jarvis uses the execution keyword <b>now</b>.
-                                    If the music is playing and you want to stop it say : <b>Jarvis stop music now</b>. <a href="http://ourcodeworld.com/projects/projects-documentation/15/read-doc/artyom-initialize/artyom-js"> Refer to the documentation here.</a>
-                                </div>
-                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                                    <div class="section__circle-container__circle mdl-color--primary"></div>
-                                </div>
-                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                    <h5>Debug mode active</h5>
-                                    See everything that happens in the javascript console
-                                </div>
-                                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                                    <div class="section__circle-container__circle mdl-color--primary"></div>
-                                </div>
-                                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                                    <h5>Test in a quiet place</h5>
-                                    Remember that this technology is not perfect, to play nicely with artyom.js and webkitspeechrecognition is recommendable to use
-                                    in quiet places. If a command doesn't work use the execution keyword "now" : 'please do something <b>now</b>'. This will be helpful in noisy environments.
-                                </div>
-                            </div>
-                            <div class="mdl-card__actions">
-                                <a href="#" class="mdl-button">Read our features</a>
-                            </div>
-                        </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
-                            <i class="material-icons">more_vert</i>
-                        </button>
-                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
-                            <li class="mdl-menu__item">Lorem</li>
-                            <li class="mdl-menu__item" disabled>Ipsum</li>
-                            <li class="mdl-menu__item">Dolor</li>
-                        </ul>
-                    </section>
-                    <section class="section--footer mdl-color--white mdl-grid">
-                        <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone" style="text-align:center;">
-                            <img src="http://ourcodeworld.com/resources/img/ocw-logo-main.png" style="max-height:95px;"/>
-                        </div>
-                        <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                            <h5>Our Code World</h5>
-                            A world of code, closer than you think. <a href="http://ourcodeworld.com"> Read more coding articles in www.ourcodeworld.com</a><br>
-                            This demo is under development, therefore there are just a couple of commands, you can make it better ! Download artyom.js and develop your own jarvis.
-                        </div>
-                    </section>
+                  
+                  
+                
                 </div>
                 <div class="mdl-layout__tab-panel" id="features">
-                    <section class="section--center mdl-grid mdl-grid--no-spacing">
-                        <div id='commands-container'>
-                            
-                        </div>
-                    </section>
+                   
                 </div>
                 <footer class="mdl-mega-footer">
                     <div class="mdl-mega-footer--middle-section">
