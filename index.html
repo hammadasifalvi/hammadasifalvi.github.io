@@ -80,7 +80,6 @@
         <div class="container">
         <div ng-controller="mainController"><br>
   <h1 id="answer">Score</h1>
-    <h2><span id='recognized-text'></span></h2><br>
   <div id="comments"></div>
 </div>
 
@@ -162,14 +161,7 @@
         $(window).load(function(){
             artyom.say("Timmy system On"); 
         });
-         artyom.redirectRecognizedTextOutput(function(text,isFinal){
-                var sel = $('#recognized-text');
-                if(isFinal){
-                    sel.html('');
-                }else{
-                    sel.html(text);
-                }
-            });
+        
         function isLocalFile(){
             if((window.location.origin) == "file://"){
                 notify("ATENTION: It seems you're running the artyom demo from a local file ! The SpeechRecognitionAPI Needs to be hosted someway (server as http or https). \n Artyom will NOT work here, Sorry.");
