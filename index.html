@@ -60,14 +60,7 @@
                                 <a href="#" class="mdl-button" onclick="artyom.simulateInstruction('jarvis stop music');">Close music</a>
                             </div>
                         </div>
-                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
-                            <i class="material-icons">more_vert</i>
-                        </button>
-                        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-                            <li class="mdl-menu__item">Lorem</li>
-                            <li class="mdl-menu__item" disabled>Ipsum</li>
-                            <li class="mdl-menu__item">Dolor</li>
-                        </ul>
+                    
                     </section>
                
                     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -250,23 +243,7 @@
                 });
             }
             
-            $(window).load(function(){
-                $('#view-source').text("this demo is running artyom.js v."+artyom.getVersion());
-                startArtyom();
-                
-                var commands = artyom.getAvailableCommands();
-                var html = '';
-                
-                for(var i = 0;i < commands.length;i++){
-                    var comm = commands[i];
-                    html += '<div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">';
-                    html += '<h5>'+comm.indexes.toString()+'</h5>';
-                    html +=  comm.description;
-                    html += '</div>'
-                }
-                
-                $('#commands-container').html(html);
-            });
+          
         </script>
     </body>
 </html>
