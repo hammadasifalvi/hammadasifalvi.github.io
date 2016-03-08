@@ -49,7 +49,7 @@
             }   
         }
     }
-}
+},
         {
             indexes: ['hello'],
             action : function(i){
