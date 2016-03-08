@@ -54,7 +54,7 @@
     description:"Bring Items",
     smart:true,
     // Ways to trigger the command with the voice
-    indexes:["Bring me *","Pick up *"],
+    indexes:["Bring me *","Bring me the *","Bring me a *","Pick up the *","Pick up a *"],
     // Do something when the commands is triggered
     action:function(i,wildcard){
         var database = ["Cup","Book","Cane","Stick","Pen"];
