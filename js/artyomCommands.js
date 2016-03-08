@@ -50,6 +50,32 @@
         }
     }
 },
+     {
+    description:"Bring Items",
+    smart:true,
+    // Ways to trigger the command with the voice
+    indexes:["Bring me *","Pick up *"],
+    // Do something when the commands is triggered
+    action:function(i,wildcard){
+        var database = ["Cup","Book","Cane","Stick","Pen"];
+
+        //If the command "is xxx a good person" is triggered do, else
+        if(i == 2){
+            if(database.indexOf(wildcard.trim())){
+                artyom.say("I'm a machine, I dont know what is a feeling");
+            }else{
+                artyom.say("I don't know who is " + wildcard + " and i cannot say if is a good person");
+            }   
+        }else{
+            if(database.indexOf(wildcard.trim())){
+                artyom.say("Where is "+ wildcard + " Please tell its location");
+
+            }else{
+                artyom.say("Not found " + wildcard);
+            }   
+        }
+    }
+},
         {
             indexes: ['hello'],
             action : function(i){
