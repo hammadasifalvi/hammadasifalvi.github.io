@@ -26,6 +26,31 @@
     var artyomCommands = [
         //Simple Command Example
         {
+    description:"If my database contains the name of a person say something",
+    smart:true,
+    // Ways to trigger the command with the voice
+    indexes:["Do you know who is *","I don't know who is *","Is * a good person"],
+    // Do something when the commands is triggered
+    action:function(i,wildcard){
+        var database = ["Carlos","Bruce","David","Joseph","Kenny"];
+
+        //If the command "is xxx a good person" is triggered do, else
+        if(i == 2){
+            if(database.indexOf(wildcard.trim())){
+                artyom.say("I'm a machine, I dont know what is a feeling");
+            }else{
+                artyom.say("I don't know who is " + wildcard + " and i cannot say if is a good person");
+            }   
+        }else{
+            if(database.indexOf(wildcard.trim())){
+                artyom.say("Of course i know who is "+ wildcard + ". A really good person");
+            }else{
+                artyom.say("My database is not big enough, I don't know who is " + wildcard);
+            }   
+        }
+    }
+}
+        {
             indexes: ['hello'],
             action : function(i){
                 artyom.say("How's going !");
