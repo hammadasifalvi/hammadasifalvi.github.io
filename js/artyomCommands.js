@@ -68,7 +68,7 @@
             }   
         }else{
             if(database.indexOf(wildcard.trim())){
-                artyom.say("Where is "+ wildcard + " Please tell its location");
+                artyom.say("Where is the "+ wildcard + " Please tell its location");
 
             }else{
                 artyom.say("Not found " + wildcard);
