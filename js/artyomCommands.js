@@ -87,7 +87,7 @@
             action : function(i){
                 artyom.say("Taking Photo");//take_snapshot()
                 artyom.say("SMile ");
-                take_snapshot();
+                take_snapshot(); 
                   artyom.say("Captured");
             }
         },
