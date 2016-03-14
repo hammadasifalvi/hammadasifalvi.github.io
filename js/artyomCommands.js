@@ -82,6 +82,13 @@
                 artyom.say("How's going !");
             }
         },
+         {
+            indexes: ['take photo'],
+            action : function(i){
+                artyom.say("Taking Photo now!");
+                  artyom.say("Say Cheese!!");
+            }
+        },
         //Smart Command Example
         {
             indexes: ['pronunciate * please'],
@@ -171,3 +178,6 @@ function firebaseCommands(name,comment){
         window.artyCommands = ArtyomCommands();
     }
 })(window);
+
+
+
