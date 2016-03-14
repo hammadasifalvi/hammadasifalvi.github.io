@@ -82,16 +82,17 @@
                 artyom.say("How's going !");//take_snapshot()
             }
         },
-
- indexes: ['take photo'],
+ {
+            indexes: ['take photo'],
             action : function(i){
-                artyom.say("Taking photo now!");
-                    artyom.say("Smile");
+                artyom.say("Taking Photo");//take_snapshot()
+                artyom.say("SMile ");
                 take_snapshot();
-                    artyom.say("Captured");
-
-            }//
+                  artyom.say("Captured");
+            }
         },
+
+
 
         //Smart Command Example
         {
