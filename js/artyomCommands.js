@@ -918,4 +918,4 @@ else {
                 document.getElementById('results').innerHTML = 
                     '<h2>Here is your image:</h2>' + 
                     '<img src="'+data_uri+'"/>';
-            } );
+            } )
