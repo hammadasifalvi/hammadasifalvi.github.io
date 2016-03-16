@@ -36,7 +36,7 @@
             action : function(i){
                 artyom.say("Yes master I am Happy");
                 var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
-nRef.push().set("sad");
+nRef.set("sad");
             }
         },
         //Smart Command Example
