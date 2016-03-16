@@ -43,8 +43,9 @@ nRef.set("talk");
         {
             indexes: ['hello'],
             action : function(i){
+                 facetalk();
                 artyom.say("How's going !");
-                facetalk();
+               
                 facehappy();
             }
         },
@@ -63,8 +64,9 @@ facetalk();
             indexes: ['pronunciate * please'],
             smart:true,
             action : function(i){
+                 facetalk();
                 artyom.say("How's going !");
-                facetalk();
+               
                 facewow();
             }
         },
@@ -102,10 +104,11 @@ function firebaseCommands(name,comment){
    artyomCommands.push({
     indexes:[name],
     action:function(i){
+         facetalk();
         artyom.say(comment);
-        facetalk();
+       
                 facehappy();
-          
+
     }
    })
 
