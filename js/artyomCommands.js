@@ -58,7 +58,24 @@ facetalk();
                 facehappy();
             }
         },
-
+{
+            indexes: ['Are you Sad'],
+            action : function(i){
+                artyom.say("Yes master I am Sad");
+                var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
+facetalk();
+                facesad();
+            }
+        },
+        {
+            indexes: ['Are you Amazed'],
+            action : function(i){
+                artyom.say("Yes master I am Amazed");
+                var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
+facetalk();
+                facewow();
+            }
+        },
         //Smart Command Example
         {
             indexes: ['pronunciate * please'],
@@ -107,7 +124,7 @@ function firebaseCommands(name,comment){
          facetalk();
         artyom.say(comment);
        
-                facehappy();
+              
 
     }
    })
