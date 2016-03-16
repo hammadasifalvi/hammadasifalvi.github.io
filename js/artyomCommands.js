@@ -21,7 +21,22 @@
      * @type Array
      */
   
-
+function facesad(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
+nRef.set("sad");
+}
+function facehappy(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
+nRef.set("happy");
+}
+function facewow(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
+nRef.set("wow");
+}
+function facetalk(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
+nRef.set("talk");
+}
 
     var artyomCommands = [
         //Simple Command Example
@@ -29,6 +44,8 @@
             indexes: ['hello'],
             action : function(i){
                 artyom.say("How's going !");
+                facetalk();
+                facehappy();
             }
         },
           {
@@ -36,15 +53,19 @@
             action : function(i){
                 artyom.say("Yes master I am Happy");
                 var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
-nRef.set("sad");
+facetalk();
+                facehappy();
             }
         },
+
         //Smart Command Example
         {
             indexes: ['pronunciate * please'],
             smart:true,
             action : function(i){
                 artyom.say("How's going !");
+                facetalk();
+                facewow();
             }
         },
         {
@@ -82,6 +103,9 @@ function firebaseCommands(name,comment){
     indexes:[name],
     action:function(i){
         artyom.say(comment);
+        facetalk();
+                facehappy();
+          
     }
    })
 
@@ -128,3 +152,5 @@ function firebaseCommands(name,comment){
         window.artyCommands = ArtyomCommands();
     }
 })(window);
+
+
