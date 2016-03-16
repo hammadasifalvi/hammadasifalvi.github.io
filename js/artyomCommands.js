@@ -31,6 +31,14 @@
                 artyom.say("How's going !");
             }
         },
+          {
+            indexes: ['Are you Happy'],
+            action : function(i){
+                artyom.say("Yes master I am Happy");
+                var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
+nRef.push().set("sad");
+            }
+        },
         //Smart Command Example
         {
             indexes: ['pronunciate * please'],
