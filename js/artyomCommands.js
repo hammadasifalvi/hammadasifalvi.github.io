@@ -37,6 +37,14 @@ function facetalk(){
                     var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
 nRef.set("talk");
 }
+function faceninja(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
+nRef.set("ninja");
+}
+function facecute(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
+nRef.set("cute");
+}
 
     var artyomCommands = [
         //Simple Command Example
@@ -56,6 +64,24 @@ nRef.set("talk");
                 var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
 facetalk();
                 facehappy();
+            }
+        },
+         {
+            indexes: ['ninja'],
+            action : function(i){
+                artyom.say("Ninja Mode on");
+                var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
+facetalk();
+                faceninja();
+            }
+        },
+         {
+            indexes: ['cute'],
+            action : function(i){
+                artyom.say("Cute Mode on");
+                var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
+facetalk();
+                facecute();
             }
         },
 {
@@ -121,6 +147,7 @@ function firebaseCommands(name,comment){
    artyomCommands.push({
     indexes:[name],
     action:function(i){
+        facehappy();
          facetalk();
         artyom.say(comment);
        
