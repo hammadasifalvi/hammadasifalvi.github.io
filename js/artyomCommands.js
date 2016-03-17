@@ -45,7 +45,10 @@ function facecute(){
                     var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
 nRef.set("cute");
 }
-
+function clearspeech(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/speech');
+nRef.set(" ");
+}
     var artyomCommands = [
         //Simple Command Example
         {
@@ -150,6 +153,7 @@ function firebaseCommands(name,comment){
         facehappy();
          facetalk();
         artyom.say(comment);
+         clearspeech();
        
               
 
