@@ -153,7 +153,7 @@ function firebaseCommands(name,comment){
        
               
 
-    }
+    }    
    })
 
 }
