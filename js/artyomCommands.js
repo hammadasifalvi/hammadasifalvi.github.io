@@ -46,7 +46,7 @@ function facecute(){
 nRef.set("cute");
 }
 function clearspeech(){
-                    var nRef = new Firebase('https://robotface.firebaseio.com/speech');
+                    var nRef = new Firebase('https://fypvoicerobo.firebaseio.com/rosdata2');
 nRef.set(" ");
 }
     var artyomCommands = [
