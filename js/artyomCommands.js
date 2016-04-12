@@ -131,7 +131,7 @@ facetalk();
         //Continue adding your own commands here
     ];
     
-       var ref = new Firebase("https://fypvoicerobo.firebaseio.com/");
+       var ref = new Firebase("https://fypvoice.firebaseio.com/");
        
 
 
