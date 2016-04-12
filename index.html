@@ -132,6 +132,7 @@
  var ref = new Firebase("https://fypvoice.firebaseio.com/currentProcess");
 ref.on("child_added", function(snapshot) {
   var result = snapshot.val();
+  console.log("result");
   if(result=="idle")
 {
 //10 second
