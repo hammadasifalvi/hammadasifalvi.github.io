@@ -45,6 +45,26 @@ function facecute(){
                     var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
 nRef.set("cute");
 }
+function openGripper(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/speech');
+nRef.set("open_gripper");
+}
+function closeGripper(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/speech');
+nRef.set("close_gripper");
+}
+function neutralGripper(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/speech');
+nRef.set("neutral_gripper");
+}
+function rightUp(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/speech');
+nRef.set("right_up");
+}
+function resting(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/speech');
+nRef.set("resting");
+}
 function clearspeech(){
                     var nRef = new Firebase('https://robotface.firebaseio.com/speech');
 nRef.set(" ");
@@ -58,6 +78,51 @@ nRef.set(" ");
                 artyom.say("How's going !");
                
                 facehappy();
+            }
+        },
+        {
+        indexes: ['open'],
+            action : function(i){
+                 facetalk();
+                artyom.say("Openning Gripper");
+               
+                openGripper();
+            }
+        },
+        {
+         indexes: ['close'],
+            action : function(i){
+                 facetalk();
+                artyom.say("Close Gripper");
+               
+                closeGripper();
+            }
+        },
+         {
+         indexes: ['easy'],
+            action : function(i){
+                 facetalk();
+                artyom.say("Easy Gripper");
+               
+                neutralGripper();
+            }
+        },
+         {
+         indexes: ['raise'],
+            action : function(i){
+                 facetalk();
+                artyom.say("Raising Arm");
+               
+                rightUp();
+            }
+        },
+        {
+         indexes: ['lower'],
+            action : function(i){
+                 facetalk();
+                artyom.say("Lowering Arm");
+               
+                resting();
             }
         },
           {
