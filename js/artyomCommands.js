@@ -80,6 +80,21 @@ nRef.set(" ");
                 facehappy();
             }
         },
+         {
+        indexes: ['recognize'],
+            action : function(i){
+                 facetalk();
+                artyom.say("recognizing");
+               var getRef = new Firebase('https://fypvoicerobo.firebaseio.com/rosdata');
+getRef.on("value",function(snapshot){
+artyom.say("I see "+snapshot.val());
+},function (errorObject) {
+    // body...
+    console.log("Error");
+});
+                
+            }
+        },
         {
         indexes: ['open'],
             action : function(i){
