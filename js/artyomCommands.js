@@ -78,6 +78,11 @@ nRef.set(" ");
                 artyom.say("How's going !");
                
                 facehappy();
+
+                setTimeout(function() {
+                    // body...
+                    artyom.shutup();
+                },3000);
             }
         },
          {
