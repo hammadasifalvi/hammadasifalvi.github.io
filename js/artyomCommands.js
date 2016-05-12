@@ -79,10 +79,7 @@ nRef.set(" ");
                
                 facehappy();
 
-                setTimeout(function() {
-                    // body...
-                    artyom.shutup();
-                },3000);
+           
             }
         },
          {
