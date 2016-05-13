@@ -65,6 +65,10 @@ function resting(){
                     var nRef = new Firebase('https://robotface.firebaseio.com/speech');
 nRef.set("resting");
 }
+function pick(){
+                    var nRef = new Firebase('https://robotface.firebaseio.com/speech');
+nRef.set("pick");
+}
 function clearspeech(){
                     var nRef = new Firebase('https://robotface.firebaseio.com/speech');
 nRef.set(" ");
@@ -73,6 +77,17 @@ nRef.set(" ");
         //Simple Command Example
         {
             indexes: ['hello'],
+            action : function(i){
+                 facetalk();
+                artyom.say("How's going !");
+               
+                facehappy();
+
+           
+            }
+        },
+           {
+            indexes: ['hi'],
             action : function(i){
                  facetalk();
                 artyom.say("How's going !");
@@ -140,6 +155,15 @@ artyom.say("I see "+snapshot.val());
                 artyom.say("Lowering Arm");
                
                 resting();
+            }
+        },
+         {
+         indexes: ['Coca-Cola Can'],
+            action : function(i){
+                 facetalk();
+                artyom.say("picking the can");
+               
+                pick();
             }
         },
           {
