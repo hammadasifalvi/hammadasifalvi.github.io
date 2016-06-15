@@ -104,7 +104,7 @@ ga('send', {
                 artyom.say("Hows going !");
                
                 facehappy();
-		eventGeneration('Speech','Speech','Hows going !','label');
+		eventGeneration('Speech','Speech','How is Going','label');
 
            
             }
