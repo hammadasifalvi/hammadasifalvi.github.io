@@ -101,7 +101,7 @@ ga('send', {
             indexes: ['hi'],
             action : function(i){
                  facetalk();
-                artyom.say("How's going !");
+                artyom.say("Hows going !");
                
                 facehappy();
 		eventGeneration('Speech','Speech','How's going !','label');
