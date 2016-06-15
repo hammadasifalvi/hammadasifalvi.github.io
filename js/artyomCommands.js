@@ -73,6 +73,16 @@ function clearspeech(){
                     var nRef = new Firebase('https://robotface.firebaseio.com/speech');
 nRef.set(" ");
 }
+
+
+function eventGeneration(event,cat,action,label){
+ga('send', {
+  hitType: event,
+  eventCategory: cat,
+  eventAction: action,
+  eventLabel: label
+});
+}
     var artyomCommands = [
         //Simple Command Example
         {
@@ -81,7 +91,8 @@ nRef.set(" ");
                  facetalk();
                 artyom.say("How's going !");
                
-                facehappy();
+                facehappy(); 
+		eventGeneration('Speech','Speech','hello','label');
 
            
             }
@@ -93,6 +104,7 @@ nRef.set(" ");
                 artyom.say("How's going !");
                
                 facehappy();
+		eventGeneration('Speech','Speech','How's going !','label');
 
            
             }
@@ -102,13 +114,16 @@ nRef.set(" ");
             action : function(i){
                  facetalk();
                 artyom.say("recognizing");
+
                var getRef = new Firebase('https://fypvoicerobo.firebaseio.com/rosdata');
 getRef.on("value",function(snapshot){
 artyom.say("I see "+snapshot.val());
+eventGeneration('Recognize','Speech','Recognition',snapshot.val());
 },function (errorObject) {
     // body...
     console.log("Error");
 });
+
                 
             }
         },
@@ -117,6 +132,8 @@ artyom.say("I see "+snapshot.val());
             action : function(i){
                  facetalk();
                 artyom.say("Openning Gripper");
+eventGeneration('Gripper','Open','Open','label');
+
                
                 openGripper();
             }
@@ -126,7 +143,8 @@ artyom.say("I see "+snapshot.val());
             action : function(i){
                  facetalk();
                 artyom.say("Close Gripper");
-               
+               eventGeneration('Gripper','Movement','Close','label');
+
                 closeGripper();
             }
         },
@@ -135,7 +153,8 @@ artyom.say("I see "+snapshot.val());
             action : function(i){
                  facetalk();
                 artyom.say("Easy Gripper");
-               
+               eventGeneration('Gripper','Movement','Easy','label');
+
                 neutralGripper();
             }
         },
@@ -144,7 +163,8 @@ artyom.say("I see "+snapshot.val());
             action : function(i){
                  facetalk();
                 artyom.say("Raising Arm");
-               
+               eventGeneration('Gripper','Movement','Raise','label');
+
                 rightUp();
             }
         },
@@ -153,7 +173,9 @@ artyom.say("I see "+snapshot.val());
             action : function(i){
                  facetalk();
                 artyom.say("Lowering Arm");
-               
+                eventGeneration('Arm','Movement','Lower','label');
+
+              
                 resting();
             }
         },
@@ -162,6 +184,9 @@ artyom.say("I see "+snapshot.val());
             action : function(i){
                  facetalk();
                 artyom.say("picking the can");
+ eventGeneration('Arm','picking','can','label');
+
+              
                
                 pick();
             }
@@ -173,6 +198,7 @@ artyom.say("I see "+snapshot.val());
                 var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
 facetalk();
                 facehappy();
+ eventGeneration('mood','happy','happy','label');
             }
         },
          {
@@ -200,6 +226,7 @@ facetalk();
                 var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
 facetalk();
                 facesad();
+ eventGeneration('mood','sad','sad','label');
             }
         },
         {
