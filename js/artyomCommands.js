@@ -30,7 +30,7 @@
   ga('send', 'pageview');
 
 
-
+console.log('Event Created')
 ga('send', {
   hitType: 'eventnew',
   eventCategory: 'cat',
