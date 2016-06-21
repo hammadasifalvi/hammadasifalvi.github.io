@@ -843,6 +843,11 @@ ref.set(er[i].value);
 
             var ref = new Firebase("https://fypvoicerobo.firebaseio.com/openclose");
            ref.set(dot.toPrecision(2));
+               var ref = new Firebase("https://robotface.firebaseio.com/speech");
+               if(dot.toPrecision(2)>0)
+           ref.set("Open");
+       else
+          ref.set("Close");
             
           }
         }
