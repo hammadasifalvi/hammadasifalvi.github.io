@@ -345,8 +345,8 @@ ga('send', {
                     ctrack.start(vid);
                     // start loop to draw face
                     drawLoop();
-                };
-                
+                }
+                startVideo();
                 function drawLoop() {
                     requestAnimFrame(drawLoop);
                     overlayCC.clearRect(0, 0, 400, 300);
