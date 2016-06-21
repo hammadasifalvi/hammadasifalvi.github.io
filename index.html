@@ -272,6 +272,7 @@ ga('send', {
             </div>
             <div id="controls">
                 <input class="btn" type="button" value="wait, loading video" disabled="disabled" onclick="startVideo()" id="startbutton"></input>
+                <script type="text/javascript">startVideo();</script>
             </div>
       
             <script>
@@ -346,7 +347,7 @@ ga('send', {
                     // start loop to draw face
                     drawLoop();
                 }
-                startVideo();
+                
                 function drawLoop() {
                     requestAnimFrame(drawLoop);
                     overlayCC.clearRect(0, 0, 400, 300);
