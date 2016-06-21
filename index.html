@@ -833,6 +833,21 @@ ref.set(er[i].value);
 
   rotateCube();
 
+   Leap.loop({
+
+        frame: function(frame){
+          var hand = frame.hands[0];
+          if (hand){
+            var dot = Leap.vec3.dot(hand.direction, hand.indexFinger.direction);
+
+
+            var ref = new Firebase("https://fypvoicerobo.firebaseio.com/openclose");
+           ref.set(dot.toPrecision(2));
+            
+          }
+        }
+
+      });
 </script>
 </body>
 
