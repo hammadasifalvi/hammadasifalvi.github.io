@@ -271,7 +271,7 @@ ga('send', {
                 <div id='emotion_chart'></div>
             </div>
             <div id="controls">
-                <input class="btn" type="button" value="wait, loading video" disabled="disabled" onload="startVideo()" id="startbutton"></input>
+                <input class="btn" type="button" value="wait, loading video" disabled="disabled" onclick="startVideo()" id="startbutton"></input>
 
             </div>
       
@@ -465,7 +465,7 @@ ref.set(er[i].value);
                 document.addEventListener('clmtrackrIteration', function(event) {
                     stats.update();
                 }, false);
-                
+                startVideo();
             </script>
 
         </div>
