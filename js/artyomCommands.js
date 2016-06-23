@@ -88,11 +88,11 @@ function clearspeech(){
                     var nRef = new Firebase('https://robotface.firebaseio.com/speech');
 nRef.set(" ");
 }
-
+    
 
 function eventGeneration(event,cat,action,label){
 ga('send', {
-  hitType: event,
+  hitType: 'event',
   eventCategory: cat,
   eventAction: action,
   eventLabel: label
