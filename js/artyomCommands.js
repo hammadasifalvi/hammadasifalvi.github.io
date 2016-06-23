@@ -31,7 +31,7 @@
 
 console.log('Event Created');
 ga('send', {
-  hitType: 'eventnew',
+  hitType: 'event',
   eventCategory: 'hello',
   eventAction: 'action',
   eventLabel: 'label'
