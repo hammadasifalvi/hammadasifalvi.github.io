@@ -314,7 +314,7 @@ function firebaseCommands(name,comment){
     }    
    })
 
-}
+}  
     /**
      * Artyom Commands Functions
      * 
