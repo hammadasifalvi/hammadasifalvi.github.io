@@ -24,7 +24,7 @@
 
 
 
-console.log('Event Created')
+console.log('Event Created');
 ga('send', {
   hitType: 'eventnew',
   eventCategory: 'hello',
@@ -111,7 +111,7 @@ ga('send', {
             indexes: ['hi'],
             action : function(i){
                  facetalk();
-                artyom.say("Hows going !");
+                artyom.say("How's going !");
                
                 facehappy();
 		eventGeneration('Speech','Speech','How is Going','label');
@@ -297,9 +297,6 @@ function firebaseCommands(name,comment){
          facetalk();
         artyom.say(comment);
          clearspeech();
-       
-              
-
     }    
    })
 
