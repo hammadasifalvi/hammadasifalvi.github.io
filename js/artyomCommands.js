@@ -36,6 +36,11 @@ ga('send', {
   eventAction: 'action',
   eventLabel: 'label'
 });
+
+function pleaseTalk(text){
+var nRef = new Firebase('https://robotface.firebaseio.com/speech');
+nRef.set(text);
+}
 function facesad(){
                     var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
 nRef.set("sad");
@@ -105,7 +110,7 @@ ga('send', {
             action : function(i){
                  facetalk();
                 artyom.say("How's going !");
-               
+               pleaseTalk('Hows going ');
                 facehappy(); 
 		eventGeneration('Speech','Speech','hello','label');
 
@@ -117,7 +122,7 @@ ga('send', {
             action : function(i){
                  facetalk();
                 artyom.say("How's going !");
-               
+                 pleaseTalk('Hows going ');
                 facehappy();
 		eventGeneration('Speech','Speech','How is Going','label');
 
@@ -133,6 +138,8 @@ ga('send', {
                var getRef = new Firebase('https://fypvoicerobo.firebaseio.com/rosdata');
 getRef.on("value",function(snapshot){
 artyom.say("I see "+snapshot.val());
+
+  pleaseTalk("I see "+snapshot.val());
 eventGeneration('Recognize','Speech','Recognition',snapshot.val());
 },function (errorObject) {
     // body...
@@ -146,9 +153,9 @@ eventGeneration('Recognize','Speech','Recognition',snapshot.val());
         indexes: ['open'],
             action : function(i){
                  facetalk();
-                artyom.say("Openning Gripper");
+                artyom.say("Opening Gripper");
 eventGeneration('Gripper','Open','Open','label');
-
+pleaseTalk('Opening Gripper');
                
                 openGripper();
             }
@@ -159,7 +166,7 @@ eventGeneration('Gripper','Open','Open','label');
                  facetalk();
                 artyom.say("Close Gripper");
                eventGeneration('Gripper','Movement','Close','label');
-
+pleaseTalk('CloseGripper');
                 closeGripper();
             }
         },
@@ -169,7 +176,7 @@ eventGeneration('Gripper','Open','Open','label');
                  facetalk();
                 artyom.say("Easy Gripper");
                eventGeneration('Gripper','Movement','Easy','label');
-
+pleaseTalk('Easing Gripper');
                 neutralGripper();
             }
         },
@@ -179,7 +186,7 @@ eventGeneration('Gripper','Open','Open','label');
                  facetalk();
                 artyom.say("Raising Arm");
                eventGeneration('Gripper','Movement','Raise','label');
-
+pleaseTalk('Raising Arm');
                 rightUp();
             }
         },
@@ -189,7 +196,7 @@ eventGeneration('Gripper','Open','Open','label');
                  facetalk();
                 artyom.say("Lowering Arm");
                 eventGeneration('Arm','Movement','Lower','label');
-
+pleaseTalk('Lowering Arm');
               
                 resting();
             }
@@ -200,7 +207,7 @@ eventGeneration('Gripper','Open','Open','label');
                  facetalk();
                 artyom.say("picking the can");
  eventGeneration('Arm','picking','can','label');
-
+pleaseTalk('Picking the Can');
               
                
                 pick();
@@ -213,6 +220,7 @@ eventGeneration('Gripper','Open','Open','label');
                 var nRef = new Firebase('https://robotface.firebaseio.com/mouth');
 facetalk();
                 facehappy();
+                pleaseTalk('Yes master I am Happy');
  eventGeneration('mood','happy','happy','label');
             }
         },
@@ -302,6 +310,7 @@ function firebaseCommands(name,comment){
          facetalk();
         artyom.say(comment);
          clearspeech();
+          pleaseTalk(comment);
     }    
    })
 
