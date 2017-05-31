@@ -10,11 +10,7 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body style="background-color: #5b33ad;    background: #13005B; /* For browsers that do not support gradients */
-background: -webkit-linear-gradient(#13005B, #592C89); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(#13005B, #592C89); /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(#13005B, #592C89); /* For Firefox 3.6 to 15 */
-background: linear-gradient(#13005B, #592C89); /* Standard syntax */">
+<body style="background-color: #5b33ad;  ">
 <img  class="responsive-img" src="img/ranking_top.png">
 
 <div class="section no-pad-bot" id="index-banner">
@@ -84,7 +80,7 @@ user will not be counted for this competition<br><br>
 
 Winners will be announced
 on 21-06-2017.</p>
-                      <div class="row">
+                      <div class="row" >
                         <div class="col s2 m6 "><img class="responsive-img"style="height:30px; width:30px; margin-top: 7px;  "src="img/duration.png"></div>
                         <div class="col s10 m12 pull-s1" >  
                           <h5 style="margin-left:11px;" >Incentives:</h5>
@@ -114,7 +110,7 @@ on 21-06-2017.</p>
                   <div class="card">
 
                     <div class="card-content">
-                      <div class="row "  id="demo">
+                      <div class="row "  id="demo" >
                    
                     
                       
@@ -145,7 +141,11 @@ on 21-06-2017.</p>
 var text = "";
 var i;
 for (i = 0; i < 3000; i=i+100) {
-    text +='<h5 class="row col s2" style="margin-top:18px; margin-left:10px;">'+i/100+'</h5>'+'<div class="row col s10">' +'<h5 class="col s12">Hammad Asif</h5>' + "<br> " +'<div class="col-6"><div class="col s2">'+'<img src=\'img/Coin.png\'  class="responsive-img" style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1  pull-s1" style="font-size:17px; margin-right:10px;">'+i +'</div>'+'<div class="col s2">'+'<img src=\'img/Gift.png\'  class="responsive-img" style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1  pull-s1" style="font-size:17px;">'+i +'<div class="col s2"></div ></div></div>'+ "<br>"+'</div>';
+    text +='<h5 class="row col s2" style="margin-top:18px; margin-left:10px; ">'+i/100+'</h5>'+'<div class="row col s10">' +'<h5 class="col s12">Hammad Asif</h5>' + "<br> " +'<div class="col-6"><div class="col s2">'+'<img src=\'img/Gift.png\'  class="responsive-img" style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1  pull-s1" style="font-size:16px; margin-right:10px; color:#868686; ">'+i +'</div>'+'<div class="col s2">'+'<img src=\'img/Coin.png\'  class="responsive-img" style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1  pull-s1" style="font-size:16px; color:#868686; ">'+i +'<div class="col s2"></div ></div></div>'+'</div>';
+if(i==2){
+   text +='<div class="row" style="height:1px; background-color:#000">1</div>';
+}
+
 }
 document.getElementById("demo").innerHTML = text; 
 </script>
