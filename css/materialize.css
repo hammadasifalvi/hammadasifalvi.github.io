@@ -4685,7 +4685,7 @@ small {
   margin: 0.5rem 0 1rem 0;
   background-color: #fff;
   transition: box-shadow .25s;
-  border-radius: 2px;
+  border-radius: 16px;
 }
 
 .card .card-title {
@@ -4963,7 +4963,7 @@ small {
   overflow-y: hidden;
   height: 48px;
   width: 100%;
-  background-color: #fff;
+  background-color: #00000000;
   margin: 0 auto;
   white-space: nowrap;
 }
