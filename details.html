@@ -81,7 +81,7 @@
                         Winners will be announced
                         on 21-06-2017.</p>
                         <div class="row" >
-                        <div class="col s2 m6 "><img style="height:30px; width:30px; margin-top: 7px;  "src="img/duration.png"></div>
+                          <div class="col s2 m6 "><img style="height:30px; width:30px; margin-top: 7px;  "src="img/incentive.png"></div>
                           <div class="col s10 m12 pull-s1" >  
                             <h5 style="margin-left:11px;" >Rewards</h5>
                           </div>
@@ -136,36 +136,347 @@
 
 
         <script>
-          var text = "";
-          var i;
-          for (i = 0; i < 3000; i=i+100) {
-            switch(i) {
-              case 0:
-              text +='<img class="row col s2 m2" style="margin-top:18px; "height:20px; width:20px;margin-left:10px; src=\'img/medalgold.png\'">'+'<div class="row col s10">' +'<h5 class="col s12 m12" style="margin-left:10px;">Hammad Asif</h5>' + "<br> " +'<div class="col-6"><div class="col s2 m2"  style="margin-left:10px;">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+i +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+i +'<div class="col s2 m2"></div ></div></div>'+'</div>';
-              break;
-              case 100:
-              text +='<img class="row col s2 m2" style="margin-top:18px; "height:20px; width:20px;margin-left:10px; src=\'img/medalgold.png\'">'+'<div class="row col s10">' +'<h5 class="col s12 m12" style="margin-left:10px;">Hammad Asif</h5>' + "<br> " +'<div class="col-6"><div class="col s2 m2"  style="margin-left:10px;">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+i +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\'   style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+i +'<div class="col s2 m2"></div ></div></div>'+'</div>';
-              break;
-              case 200:
-              text +='<img class="row col s2 m2" style="margin-top:18px; "height:20px; width:20px;margin-left:10px; src=\'img/medalgold.png\' ">'+'<div class="row col s10">' +'<h5 class="col s12 m12" style="margin-left:10px;">Hammad Asif</h5>' + "<br> " +'<div class="col-6"><div class="col s2 m2"  style="margin-left:10px;">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+i +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\'  style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+i +'<div class="col s2 m2"></div ></div></div>'+'</div>';
-              break;
-              default:
-              text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i/100+'</h5>'+'<div class="row col s10 m10">' +'<h5 class="col s12 m12">Hammad Asif</h5>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+i +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+i +'<div class="col s2 m2"></div ></div></div>'+'</div>';
-            }
-          }
+          var myObj, i, j, x = "";
+// myObj = {
+//     "name":"John",
+//     "age":30,
+//     "cars": [
+//         { "name":"Ford", "models":[ "Fiesta", "Focus", "Mustang" ] },
+//         { "name":"BMW", "models":[ "320", "X3", "X5" ] },
+//         { "name":"Fiat", "models":[ "500", "Panda" ] }
+//     ]
+// }
+
+myObj={
+ "code":"0",
+ "msg":"操作成功",
+ "data":[
+ {
+   "nickname":"Azeem Suleiman Sardar#SurrSangeet",
+   "headimg":"1484238227494.jpeg",
+   "targetid":2001200,
+   "number":112,
+   "coins":1120
+ },
+ {
+   "nickname":"Uzma Sardar #PunjabiTrolley",
+   "headimg":"1487764580402.jpeg",
+   "targetid":2001205,
+   "number":578,
+   "coins":5780
+ },
+ {
+   "nickname":"Janet#Moodygirl",
+   "headimg":"1489657773800.jpg",
+   "targetid":2001213,
+   "number":1396,
+   "coins":13960
+ },
+ {
+   "nickname":"RAK #ThePunjabiRapper",
+   "headimg":"1490084557049.jpg",
+   "targetid":2001243,
+   "number":121,
+   "coins":1210
+ },
+ {
+   "nickname":"Sadaf Eshrat #Rise&Shine",
+   "headimg":"1460019639576.jpg",
+   "targetid":2001305,
+   "number":477,
+   "coins":4770
+ },
+ {
+   "nickname":"JessicaSehar# Jess",
+   "headimg":"1491831198008.jpg",
+   "targetid":2001309,
+   "number":1404,
+   "coins":14040
+ },
+ {
+   "nickname":"Rosemmarry",
+   "headimg":"1486338403179.jpeg",
+   "targetid":2001864,
+   "number":403,
+   "coins":4030
+ },
+ {
+   "nickname":"KiranSheikh",
+   "headimg":"1490469957982.jpg",
+   "targetid":2002830,
+   "number":554,
+   "coins":5540
+ },
+ {
+   "nickname":"Dr Rida",
+   "headimg":"1470028251906.jpg",
+   "targetid":2003453,
+   "number":405,
+   "coins":4050
+ },
+ {
+   "nickname":"Ar. Sumbal",
+   "headimg":"1490525995901.jpg",
+   "targetid":2003890,
+   "number":202,
+   "coins":2020
+ },
+ {
+   "nickname":"zaima shams",
+   "headimg":"1490467996484.jpg",
+   "targetid":2004324,
+   "number":175,
+   "coins":1750
+ },
+ {
+   "nickname":"Sana Malik Awan_37533",
+   "headimg":"1474824962072.jpg",
+   "targetid":2004365,
+   "number":119,
+   "coins":1190
+ },
+ {
+   "nickname":"zoy khan",
+   "headimg":"1489685393330.jpg",
+   "targetid":2004522,
+   "number":3003,
+   "coins":30030
+ },
+ {
+   "nickname":"(PERFECT-10) M. Ali",
+   "headimg":"1491467680854.jpg",
+   "targetid":2004875,
+   "number":74,
+   "coins":740
+ },
+ {
+   "nickname":"fatima123",
+   "headimg":"1489410429996.jpg",
+   "targetid":2005084,
+   "number":693,
+   "coins":6930
+ },
+ {
+   "nickname":"AbaSyed",
+   "headimg":"1476375740810.jpg",
+   "targetid":2005275,
+   "number":204,
+   "coins":2040
+ },
+ {
+   "nickname":"shakir nadeem",
+   "headimg":"1487519704488.jpeg",
+   "targetid":2007236,
+   "number":243,
+   "coins":2430
+ },
+ {
+   "nickname":"Shayy",
+   "headimg":"1492063883821.jpg",
+   "targetid":2008115,
+   "number":799,
+   "coins":7990
+ },
+ {
+   "nickname":"RJ Ali Sohail",
+   "headimg":"1483722389058.jpeg",
+   "targetid":2008159,
+   "number":867,
+   "coins":8670
+ },
+ {
+   "nickname":"Bushra Shah",
+   "headimg":"1491999483137.jpg",
+   "targetid":2009651,
+   "number":266,
+   "coins":2660
+ },
+ {
+   "nickname":"AMIR EJAZ",
+   "headimg":"1486801678134.jpeg",
+   "targetid":2010557,
+   "number":303,
+   "coins":3030
+ },
+ {
+   "nickname":"Rj Noor",
+   "headimg":"1492365727673.jpg",
+   "targetid":2013905,
+   "number":1749,
+   "coins":17490
+ },
+ {
+   "nickname":"ma bahi nh kise da",
+   "headimg":null,
+   "targetid":2014369,
+   "number":1638,
+   "coins":16380
+ },
+ {
+   "nickname":"?KoMaL?MiRzA?",
+   "headimg":"1491842522486.jpg",
+   "targetid":2014856,
+   "number":79,
+   "coins":790
+ },
+ {
+   "nickname":"?Momena Khan#Mahi?",
+   "headimg":"1490719398398.jpg",
+   "targetid":2015040,
+   "number":377,
+   "coins":3770
+ },
+ {
+   "nickname":"Aqsa hadi",
+   "headimg":"1483194232957.jpeg",
+   "targetid":2015095,
+   "number":75,
+   "coins":750
+ },
+ {
+   "nickname":"\"Jannat ? jaweria\"",
+   "headimg":"1491727723263.jpg",
+   "targetid":2015526,
+   "number":707,
+   "coins":7070
+ },
+ {
+   "nickname":"Rj Numan jatt",
+   "headimg":"1483101533744.408949019436236",
+   "targetid":2015579,
+   "number":65,
+   "coins":650
+ },
+ {
+   "nickname":"RJ Noor Sheikh",
+   "headimg":"1485862750873.jpeg",
+   "targetid":2018558,
+   "number":410,
+   "coins":4100
+ },
+ {
+   "nickname":"Ahsan Aasee",
+   "headimg":"1487216235338.jpeg",
+   "targetid":2019055,
+   "number":108,
+   "coins":1080
+ }
+ ]
+}
+// for (i in myObj.data) {
+//     x += "<h5>" + myObj.data[i].nickname + "</h5>";
+//     }
+
+
+// document.getElementById("demoo").innerHTML = x;
+
+var text = "";
+var i;
+for (i =1; i < 31; i=i+1) {
+ if(i==1)
+  text +='<img class="row col s2 m2" style="margin-top:18px; "height:20px; width:20px;margin-left:10px; src=\'img/medalgold.png\'">'+'<div class="row col s10 m10">' +'<div class="col s12 m12" style="margin-left:10px; font-size:20px;">'+ myObj.data[i].nickname +'</div>'+ "<br> " +'<div class="col-6"><div class="col s2 m2"  style="margin-left:10px;">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number  +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\'   style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+else if(i==2)
+  text +='<img class="row col s2 m2" style="margin-top:18px; "height:20px; width:20px;margin-left:10px; src=\'img/medalgold.png\'">'+'<div class="row col s10 m10">' +'<div class="col s12 m12" style="margin-left:10px;  font-size:20px;">'+ myObj.data[i].nickname +'</div>'+ "<br> " +'<div class="col-6"><div class="col s2 m2"  style="margin-left:10px;">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number  +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\'   style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+else if(i==3)
+  text +='<img class="row col s2 m2" style="margin-top:18px; "height:20px; width:20px;margin-left:10px; src=\'img/medalgold.png\' ">'+'<div class="row col s10 m10">' +'<div class="col s12 m12" style="margin-left:10px;  font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2"  style="margin-left:10px;">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number  +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\'  style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+else if(i==4)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==5)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==6)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==7)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==8)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==9)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==10)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins+'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==11)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins+'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==12)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==13)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==14)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==15)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==16)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins+'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==17)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==18)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==19)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==20)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins+'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==21)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==22)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==23)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==24)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==25)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==26)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins+'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==27)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==28)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
+
+else if(i==29)
+  text +='<h5 class="row col s2 m2" style="margin-top:18px; margin-left:10px; ">'+i+'</h5>'+'<div class="row col s10 m10">' +'<div class="col s12 m12"  style="font-size:20px;">'+ myObj.data[i].nickname +'</div>' + "<br> " +'<div class="col-6"><div class="col s2 m2">'+'<img src=\'img/Gift.png\'   style="height:18px; width:18px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1  pull-m1" style="font-size:16px; margin-right:10px; color:#868686;margin-left:5px; ">'+myObj.data[i].number   +'</div>'+'<div class="col s2 m2">'+'<img src=\'img/Coin.png\' style="height:20px; width:20px; margin-top:2px;"">'+'</div>'+'<div class="col s1 m1 pull-s1 pull-m1" style="font-size:16px; color:#868686;margin-left:5px; ">'+myObj.data[i].coins +'<div class="col s2 m2"></div ></div></div>'+'</div>';
 
 
 
 
-          document.getElementById("demo").innerHTML = text; 
-        </script>
+}
 
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="js/materialize.js"></script>
-        <script src="js/init.js"></script>
 
-      </body>
-      <img  class="responsive-img" src="img/mosque.png">
 
-    </footer>
-    </html>
+
+
+document.getElementById("demo").innerHTML = text; 
+</script>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
+
+<p id="demoo"></p>
+
+</body>
+<img  class="responsive-img" src="img/mosque.png">
+
+</footer>
+</html>
